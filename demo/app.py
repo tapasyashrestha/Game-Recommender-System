@@ -363,15 +363,15 @@ def render_game_card(
         if show_actions:
             act_c1, act_c2, act_c3 = st.columns([1, 1, 1])
             with act_c1:
-                if st.button("❤️ Like", key=f"like_{aid}_{rank}_{np.random.randint(100000)}"):
+                if st.button("❤️ Like", key=f"like_{aid}_{rank}"):
                     add_to_library(aid, title, status="liked")
                     st.rerun()
             with act_c2:
-                if st.button("🎮 Played", key=f"play_{aid}_{rank}_{np.random.randint(100000)}"):
+                if st.button("🎮 Played", key=f"play_{aid}_{rank}"):
                     add_to_library(aid, title, status="played")
                     st.rerun()
             with act_c3:
-                if st.button("🚫 Dismiss", key=f"dis_{aid}_{rank}_{np.random.randint(100000)}"):
+                if st.button("🚫 Dismiss", key=f"dis_{aid}_{rank}"):
                     add_to_library(aid, title, status="disliked")
                     st.rerun()
 
