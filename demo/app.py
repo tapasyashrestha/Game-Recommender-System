@@ -359,7 +359,7 @@ def render_game_card(
             caption=f"App ID: {aid}",
         )
     with col_info:
-        st.markdown(card_html, unsafe_allow_html=True)
+        st.html(card_html)
         if show_actions:
             act_c1, act_c2, act_c3 = st.columns([1, 1, 1])
             with act_c1:
